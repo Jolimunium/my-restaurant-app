@@ -84,6 +84,7 @@ export default function FavoritesClient({
                     {item.price} ฿
                   </span>
                   <button
+                    type="button"
                     onClick={() => handleOpenModal(item)}
                     className="bg-brand-yellow text-black p-2 rounded-lg hover:bg-white transition-colors shrink-0"
                   >

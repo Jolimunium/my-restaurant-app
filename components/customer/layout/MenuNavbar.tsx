@@ -95,6 +95,7 @@ export default function MenuNavbar({
           }`}
         >
           <button
+            type="button"
             onClick={() => scroll("left")}
             className="p-1 rounded-full bg-brand-dark-red/80 text-brand-yellow hover:bg-brand-yellow hover:text-white transition-all border border-brand-yellow/30"
           >
@@ -109,6 +110,7 @@ export default function MenuNavbar({
         >
           {categories.map((category) => (
             <button
+              type="button"
               key={category.id}
               id={`nav-cat-${category.id}`}
               className={`px-4 py-2 rounded-md border border-brand-yellow text-sm font-medium transition-colors whitespace-nowrap ${
@@ -130,6 +132,7 @@ export default function MenuNavbar({
           }`}
         >
           <button
+            type="button"
             onClick={() => scroll("right")}
             className="p-1 rounded-full bg-brand-dark-red/80 text-brand-yellow hover:bg-brand-yellow hover:text-white transition-all border border-brand-yellow/30"
           >

@@ -68,6 +68,7 @@ export default function CartItemList({
 
                 {/* ลบออเดอร์ */}
                 <button
+                  type="button"
                   onClick={() => removeFromCart(item.id, item.note)}
                   className="text-gray-400 hover:text-red-500 transition-colors"
                 >
@@ -91,6 +92,7 @@ export default function CartItemList({
                 <div className="flex items-center gap-3 bg-white/5 rounded-lg p-1">
                   {/* จำนวนต่ำสุดคือ 1 */}
                   <button
+                    type="button"
                     onClick={() =>
                       updateCartItem(
                         item.id,
@@ -106,6 +108,7 @@ export default function CartItemList({
                     {item.quantity}
                   </span>
                   <button
+                    type="button"
                     onClick={() =>
                       updateCartItem(item.id, item.quantity + 1, item.note)
                     }

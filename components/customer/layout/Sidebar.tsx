@@ -190,6 +190,7 @@ export default function Sidebar({ isOpen, onClose }: Readonly<SidebarProps>) {
         <div className="flex flex-col h-full p-6">
           {/* ปุ่มปิด Sidebar */}
           <button
+            type="button"
             onClick={onClose}
             className="absolute top-4 right-4 text-white hover:text-gray-200 focus:outline-none"
           >
@@ -255,12 +256,14 @@ export default function Sidebar({ isOpen, onClose }: Readonly<SidebarProps>) {
                   />
                   <div className="flex gap-1">
                     <button
+                      type="button"
                       onClick={handleUpdateUsername}
                       className="p-1 hover:bg-brand-yellow/20 rounded-full text-brand-yellow transition-colors"
                     >
                       <Check className="w-4 h-4" />
                     </button>
                     <button
+                      type="button"
                       onClick={() => {
                         setIsEditingName(false);
                         setNewUsername(profile?.username || "");
@@ -279,6 +282,7 @@ export default function Sidebar({ isOpen, onClose }: Readonly<SidebarProps>) {
                   </p>
                   {user && (
                     <button
+                      type="button"
                       onClick={() => setIsEditingName(true)}
                       className="text-white/70 hover:text-brand-yellow transition-colors"
                     >
@@ -330,6 +334,7 @@ export default function Sidebar({ isOpen, onClose }: Readonly<SidebarProps>) {
                   <span className="font-medium">Settings</span>
                 </Link>
                 <button
+                  type="button"
                   onClick={handleLogout}
                   className="flex items-center px-4 py-3 text-red-500 hover:bg-red-500/10 hover:text-red-400 rounded-lg transition-colors w-full text-left mt-4 border border-red-500/20 shadow-[0_0_10px_rgba(239,68,68,0.1)]"
                 >

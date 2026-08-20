@@ -107,6 +107,7 @@ export default function AddToCartModal({
       >
         {/* ปุ่มกากบาทมุมขวาบน สำหรับปิดหน้าต่าง */}
         <button
+          type="button"
           onClick={onClose}
           className="absolute top-4 right-4 z-10 p-2 bg-black/50 rounded-full text-white hover:bg-white hover:text-black transition-colors"
         >
@@ -147,6 +148,7 @@ export default function AddToCartModal({
             <span className="text-gray-300 font-medium">Quantity</span>
             <div className="flex items-center gap-4">
               <button
+                type="button"
                 onClick={() => setQuantity(Math.max(1, quantity - 1))}
                 className="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
               >
@@ -156,6 +158,7 @@ export default function AddToCartModal({
                 {quantity}
               </span>
               <button
+                type="button"
                 onClick={() => setQuantity(quantity + 1)}
                 className="w-8 h-8 rounded-lg bg-brand-yellow text-black hover:bg-brand-yellow/80 flex items-center justify-center transition-colors"
               >
@@ -184,12 +187,14 @@ export default function AddToCartModal({
           {/* ปุ่มบันทึกการสั่งซื้อ & รายการโปรด */}
           <div className="grid grid-cols-4 gap-4">
             <button
+              type="button"
               onClick={handleAddToCart}
               className="col-span-3 w-full py-4 bg-brand-yellow text-black font-bold text-lg rounded-xl hover:bg-white transition-all active:scale-95 shadow-[0_0_20px_rgba(251,191,36,0.3)]"
             >
               Add to Cart - {(item.price * quantity).toFixed(2)} ฿
             </button>
             <button
+              type="button"
               onClick={toggleFavorite}
               className="col-span-1 w-full py-4 bg-pink-500 text-black font-bold text-lg rounded-xl hover:bg-white transition-all active:scale-95 shadow-[0_0_20px_rgba(236,72,153,0.3)] flex items-center justify-center"
             >

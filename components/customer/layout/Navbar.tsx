@@ -37,6 +37,7 @@ export default function Navbar() {
           <div className="flex gap-4 shrink-0">
             {/* ปุ่มสำหรับเปิดเมนูด้านข้าง (Hamburger Menu) */}
             <button
+              type="button"
               onClick={() => setIsSidebarOpen(true)}
               className="rounded-md border border-white px-4 py-1.5 text-sm font-medium hover:bg-brand-yellow/80 focus:outline-none focus:ring-2 focus:ring-brand-yellow bg-transparent active:scale-95"
             >

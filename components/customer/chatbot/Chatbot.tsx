@@ -114,6 +114,7 @@ export default function Chatbot() {
                 <p>อยากทานแนวไหนดีครับ?</p>
                 <div className="flex flex-wrap gap-2 mt-2">
                   <button
+                    type="button"
                     onClick={() =>
                       handleCategorySelect("เมนูส้มตำ", "🥗 ส้มตำ")
                     }
@@ -122,6 +123,7 @@ export default function Chatbot() {
                     🥗 ส้มตำ
                   </button>
                   <button
+                    type="button"
                     onClick={() =>
                       handleCategorySelect("เมนูลาบ-ก้อย", "🥩 ลาบ-ก้อย")
                     }
@@ -130,6 +132,7 @@ export default function Chatbot() {
                     🥩 ลาบ-ก้อย
                   </button>
                   <button
+                    type="button"
                     onClick={() =>
                       handleCategorySelect("เมนูลวกจิ้ม", "🍢 ลวกจิ้ม")
                     }
@@ -138,18 +141,21 @@ export default function Chatbot() {
                     🍢 ลวกจิ้ม
                   </button>
                   <button
+                    type="button"
                     onClick={() => handleCategorySelect("เมนูต้ม", "🍲 ต้ม")}
                     className="bg-brand-yellow/20 text-brand-yellow px-3 py-1.5 rounded-lg text-sm hover:bg-brand-yellow/30 transition-colors"
                   >
                     🍲 ต้ม
                   </button>
                   <button
+                    type="button"
                     onClick={() => handleCategorySelect("เมนูยำ", "🌶️ ยำ")}
                     className="bg-brand-yellow/20 text-brand-yellow px-3 py-1.5 rounded-lg text-sm hover:bg-brand-yellow/30 transition-colors"
                   >
                     🌶️ ยำ
                   </button>
                   <button
+                    type="button"
                     onClick={() =>
                       handleCategorySelect("เมนูไก่", "🍗 เมนูไก่")
                     }
@@ -254,6 +260,7 @@ export default function Chatbot() {
       {/* Floating Chat Button */}
       {!isOpen && (
         <button
+          type="button"
           onClick={() => setIsOpen(true)}
           className="fixed bottom-24 right-6 z-40 flex items-center justify-center w-14 h-14 bg-brand-yellow rounded-full shadow-[0_4px_20px_rgba(251,191,36,0.4)] hover:scale-110 active:scale-95 transition-all animate-bounce-slow"
         >
@@ -305,6 +312,7 @@ export default function Chatbot() {
             </div>
           </div>
           <button
+            type="button"
             onClick={() => setIsOpen(false)}
             className="p-2 bg-white/5 rounded-full hover:bg-white/10 transition-colors text-gray-400 hover:text-white"
           >
@@ -416,6 +424,7 @@ export default function Chatbot() {
             <div className="flex flex-wrap gap-2">
               {QUICK_OPTIONS.map((opt) => (
                 <button
+                  type="button"
                   key={opt.value}
                   onClick={() => handleOptionClick(opt.value, opt.label)}
                   className="bg-white/5 border border-white/10 hover:bg-white/10 text-white text-sm px-3 py-2 rounded-xl transition-all active:scale-95"

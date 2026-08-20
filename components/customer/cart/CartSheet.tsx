@@ -62,6 +62,7 @@ export default function CartSheet() {
     <>
       {/* ปุ่มลอยสำหรับเปิดตะกร้าสินค้า (Floating Button) */}
       <button
+        type="button"
         onClick={() => setIsOpen(true)}
         className="fixed bottom-6 right-6 z-40 flex items-center justify-center w-16 h-16 bg-brand-yellow rounded-full shadow-[0_4px_20px_rgba(251,191,36,0.4)] hover:scale-105 active:scale-95 transition-all"
       >
@@ -110,6 +111,7 @@ export default function CartSheet() {
         <div className="px-6 py-4 border-b border-white/10 flex justify-between items-center shrink-0">
           <h2 className="text-xl font-bold text-white">Your Order</h2>
           <button
+            type="button"
             onClick={() => setIsOpen(false)}
             className="p-2 bg-white/5 rounded-full hover:bg-white/10 transition-colors"
           >
@@ -134,6 +136,7 @@ export default function CartSheet() {
               </span>
             </div>
             <button
+              type="button"
               onClick={handleOrder}
               disabled={isLoading}
               className="w-full py-4 bg-brand-yellow text-black font-bold text-lg rounded-xl hover:bg-white transition-all shadow-[0_4px_20px_rgba(251,191,36,0.3)] disabled:opacity-50 disabled:cursor-not-allowed"
